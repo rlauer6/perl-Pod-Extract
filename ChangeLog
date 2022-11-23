@@ -1,0 +1,10 @@
+Wed Nov 23 13:17:45 2022  Rob Lauer  <rlauer6@comcast.net>
+
+	[BigBang]:
+	* ChangeLog: new
+	* .gitignore: new
+	* README.md: new
+	* Makefile: new
+	* bin/podextract.pl: new
+	* lib/Pod/Extract.pm: new
+

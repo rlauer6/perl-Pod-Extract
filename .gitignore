@@ -1,0 +1,7 @@
+*~
+*.tar.gz
+requires
+provides
+Pod-Extract*/
+bin/podextract
+**/*.pod
