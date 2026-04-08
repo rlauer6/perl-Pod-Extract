@@ -1,0 +1,28 @@
+project:
+  description: Pod::Extract
+  author:
+    name: Rob Lauer
+    mailto: rclauer@gmail.com
+pm_module: Pod::Extract
+min-perl-version: 5.010
+dependencies:
+  requires: requires
+  test_requires: test-requires
+  recommends: recommends
+path:
+  pm_module: lib
+  exe_files: bin
+  tests: t
+extra-files:
+  - ChangeLog
+  - share:
+      - README.md
+resources:
+  homepage: http://github.com/rlauer6/Pod-Extract.git
+  bugtracker:
+    web: http://github.com/rlauer6/Pod-Extract/issues
+    mailto: rclauer@gmail.com
+  repository:
+    url: git://github.com/rlauer6/Pod-Extract.git
+    web: http://github.com/rlauer6/Pod-Extract.git
+    type: 'git'

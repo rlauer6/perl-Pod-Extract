@@ -1,0 +1,6 @@
+CLI::Simple 1.0.11
+CLI::Simple::Constants 1.0.11
+CLI::Simple::Utils 1.0.11
+IO::Scalar 2.113
+Module::Load 0.36
+Readonly 2.05

@@ -4,6 +4,10 @@ Pod::Extract - remove pod from file
 
 # SYNOPSIS
 
+    podextract -i path/to/module -o path/to/module-without-pod -p path/to/pod
+
+or use the module...
+
     use Pod::Extract;
 
     open my $fh, '<', 'myfile.pm';
@@ -12,11 +16,15 @@ Pod::Extract - remove pod from file
 
 # DESCRIPTION
 
-Parse a Perl script or module looking for pod. Returns the pod and
-code in separate objects.
+Parses a Perl script or module looking for pod. Returns the pod and
+code in separate objects or prints the code and pod to two different
+locations. By default pod is written to STDERR, code to STDOUT.
+
+Instead of returning pod, use the `--markdown` option to return
+markdown.
 
 This module does not attempt to check the validity of the pod
-syntax. It's just a simple parser that looks for that might pass as
+syntax. It's just a simple parser that looks for what might pass as
 pod within your code. If you've done something odd, don't expect this
 module to figure it out.
 
@@ -24,15 +32,29 @@ This module was a result of refactoring lots of Perl modules that had
 pod scattered about the module on the basis of Perl Best Practices
 recommendations to place pod at the end of a module. In addition to
 the obvious standardization this provides for an application, it was
-an eye-opening experience find all the pod errors. ;-)
+an eye-opening experience finding all the pod errors. ;-)
 
-# USAGE
+_This module has very few dependencies (and very few features). If
+you want real pod parsing, use [Pod::Simple](https://metacpan.org/pod/Pod%3A%3ASimple)_.
 
-From the command line...
+## Options
 
-    podextract --infile=myfile.pm --outfile=myfile-without-pod.pm --podfile = myfile.pod
+    --infile, -i      input file
+    --outfile, -o     file to write code to 
+    --markdown, -m    return markdown
+    --podfile, -p     file to write pod to
+    --url-prefix, -u  URL prefix (see Pod::Markdown)
 
-    podextract --help
+## Commands
+
+    extract (default)
+    check
+
+## Notes
+
+    If --infile is not specified, script reads from stdin
+    If --outfile is not specified, code is written to stdout
+    If --podfile is not specified, pod is written to stderr
 
 # METHODS AND SUBROUTINES
 
@@ -47,7 +69,8 @@ representing the same objects in list context.
 
 - pod
 
-    The pod text contained in the script or module in the order it was encountered.
+    The pod text contained in the script or module in the order it was
+    encountered.
 
 - code
 
@@ -59,6 +82,13 @@ representing the same objects in list context.
 
 # AUTHOR
 
-Rob Lauer - rclauer@gmail.com
+Rob Lauer - rlauer@treasurersbriefcase.com
 
 # SEE OTHER
+
+[Pod::Markdown](https://metacpan.org/pod/Pod%3A%3AMarkdown), [Pod::Simple](https://metacpan.org/pod/Pod%3A%3ASimple)
+
+# LICENSE
+
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
