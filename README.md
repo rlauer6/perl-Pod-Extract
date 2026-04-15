@@ -1,3 +1,16 @@
+# Table of Contents
+
+* [NAME](#name)
+* [SYNOPSIS](#synopsis)
+* [DESCRIPTION](#description)
+  * [Options](#options)
+  * [Commands](#commands)
+  * [Notes](#notes)
+* [METHODS AND SUBROUTINES](#methods-and-subroutines)
+  * [extract\_pod](#extract\pod)
+* [AUTHOR](#author)
+* [SEE OTHER](#see-other)
+* [LICENSE](#license)
 # NAME
 
 Pod::Extract - remove pod from file

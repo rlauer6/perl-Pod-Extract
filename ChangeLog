@@ -1,3 +1,12 @@
+Wed Apr 15 05:51:32 2026  Rob Lauer  <rclauer@gmail.com>
+
+	[1.0.1]:
+	* Makefile: updated from CPAN::Maker::Bootstrap
+	* git.mk: likewise
+	* help.mk: likewise
+	* README.md: generated
+	* VERSION: bump
+
 Wed Apr  8 05:49:48 2026  Rob Lauer  <rclauer@gmail.com>
 
 	[1.0.0]:
@@ -19,7 +28,7 @@ Wed Apr  8 05:49:48 2026  Rob Lauer  <rclauer@gmail.com>
 	* .gitignore
 	- additions from CPAN::Maker::Bootstrapper
 
-Wed Nov 23 13:17:45 2022  Rob Lauer  <rlauer6@comcast.net>
+Wed Nov 23 13:17:45 2022  Rob Lauer  <rclauer@gmail.com>
 
 	[BigBang]:
 	* ChangeLog: new
